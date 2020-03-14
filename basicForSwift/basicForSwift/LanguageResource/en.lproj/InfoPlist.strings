@@ -1,0 +1,19 @@
+/* 
+  InfoPlist.strings
+  basicForSwift
+
+  Created by wchen on 2020/3/14.
+  Copyright © 2020 wchen. All rights reserved.
+*/
+
+
+CFBundleDisplayName = "Demo App";
+NSCalendarsUsageDescription = "We need to calculate holidays from your calendar";
+NSCameraUsageDescription = "We need to use your camera for avatar settings, upload photos, etc.";
+NSContactsUsageDescription = "We need to get your list of contacts to use to find contacts in the address book";
+NSLocationWhenInUseUsageDescription = "We need your location to accurately locate your location for chat sending";
+NSMicrophoneUsageDescription = "We need to record voice through your microphone for messaging";
+NSPhotoLibraryUsageDescription = "We need to select photos from your album for avatar settings, upload photos, etc.";
+NSPhotoLibraryAddUsageDescription = "We need to select photos from your album for avatar settings, upload photos, etc.";
+NSBluetoothPeripheralUsageDescription = "We need a Bluetooth scale and a Bluetooth printer connected to your Bluetooth for weighing and printing";
+NSBluetoothAlwaysUsageDescription = "We need a Bluetooth scale and a Bluetooth printer connected to your Bluetooth for weighing and printing";

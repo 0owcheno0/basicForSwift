@@ -1,0 +1,18 @@
+/* 
+  InfoPlist.strings
+  basicForSwift
+
+  Created by wchen on 2020/3/14.
+  Copyright © 2020 wchen. All rights reserved.
+*/
+
+CFBundleDisplayName = "示例App";
+NSCalendarsUsageDescription = "我们需要通过您的日历来计算节假日";
+NSCameraUsageDescription = "我们需要通过您的相机来进行头像设置、上传照片等功能";
+NSContactsUsageDescription = "我们需要获取您的联系人列表，用于通讯录查找联系人";
+NSLocationWhenInUseUsageDescription = "我们需要通过您的定位来准确定位您的位置，用于聊天发送位置";
+NSMicrophoneUsageDescription = "我们需要通过您的麦克风来录制语音，来进行消息发送";
+NSPhotoLibraryUsageDescription = "我们需要通过您的相册选取照片，来进行头像设置、上传照片等功能";
+NSPhotoLibraryAddUsageDescription = "我们需要通过您的相册选取照片，来进行头像设置、上传照片等功能";
+NSBluetoothPeripheralUsageDescription = "我们需要通过您的蓝牙来连接蓝牙电子秤和蓝牙打印机，来称重和打印";
+NSBluetoothAlwaysUsageDescription = "我们需要通过您的蓝牙来连接蓝牙电子秤和蓝牙打印机，来称重和打印";
