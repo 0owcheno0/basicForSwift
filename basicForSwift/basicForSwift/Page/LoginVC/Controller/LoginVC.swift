@@ -13,6 +13,8 @@ class LoginVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.navigationItem.titleView = CommonMethod.setDisplayCustomTitle(title: .localized_login, color: UIColor.init(named: "black_color")!)
+        
         self.view.backgroundColor = UIColor.init(named: "black_color_241")
     }
     

@@ -11,5 +11,6 @@ extension String {
 */
 
   static var localized_homePage: String { return "homePage".localized }
+  static var localized_login: String { return "login".localized }
 
 }
