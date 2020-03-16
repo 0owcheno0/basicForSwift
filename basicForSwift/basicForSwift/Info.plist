@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
-	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<string>zh-Hans</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -18,8 +18,28 @@
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>LSHasLocalizedDisplayName</key>
+	<true/>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSBluetoothAlwaysUsageDescription</key>
+	<string>我们需要通过您的蓝牙来连接蓝牙电子秤和蓝牙打印机，来称重和打印</string>
+	<key>NSBluetoothPeripheralUsageDescription</key>
+	<string>我们需要通过您的蓝牙来连接蓝牙电子秤和蓝牙打印机，来称重和打印</string>
+	<key>NSCalendarsUsageDescription</key>
+	<string>我们需要通过您的日历来计算节假日</string>
+	<key>NSCameraUsageDescription</key>
+	<string>我们需要通过您的相机来进行头像设置、上传照片等功能</string>
+	<key>NSContactsUsageDescription</key>
+	<string>我们需要获取您的联系人列表，用于通讯录查找联系人</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>我们需要通过您的定位来准确定位您的位置，用于聊天发送位置</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>我们需要通过您的麦克风来录制语音，来进行消息发送</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>我们需要通过您的相册选取照片，来进行头像设置、上传照片等功能</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>我们需要通过您的相册选取照片，来进行头像设置、上传照片等功能</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
@@ -53,26 +73,6 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>LSHasLocalizedDisplayName</key>
-	<true/>
-	<key>NSCalendarsUsageDescription</key>
-	<string>我们需要通过您的日历来计算节假日</string>
-	<key>NSCameraUsageDescription</key>
-	<string>我们需要通过您的相机来进行头像设置、上传照片等功能</string>
-	<key>NSContactsUsageDescription</key>
-	<string>我们需要获取您的联系人列表，用于通讯录查找联系人</string>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>我们需要通过您的定位来准确定位您的位置，用于聊天发送位置</string>
-	<key>NSMicrophoneUsageDescription</key>
-	<string>我们需要通过您的麦克风来录制语音，来进行消息发送</string>
-	<key>NSPhotoLibraryAddUsageDescription</key>
-	<string>我们需要通过您的相册选取照片，来进行头像设置、上传照片等功能</string>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>我们需要通过您的相册选取照片，来进行头像设置、上传照片等功能</string>
-	<key>NSBluetoothAlwaysUsageDescription</key>
-	<string>我们需要通过您的蓝牙来连接蓝牙电子秤和蓝牙打印机，来称重和打印</string>
-	<key>NSBluetoothPeripheralUsageDescription</key>
-	<string>我们需要通过您的蓝牙来连接蓝牙电子秤和蓝牙打印机，来称重和打印</string>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

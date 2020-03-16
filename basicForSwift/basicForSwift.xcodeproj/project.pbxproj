@@ -28,8 +28,15 @@
 		985159DB2419E44F002BB341 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 985159D92419E44F002BB341 /* Main.storyboard */; };
 		985159DD2419E451002BB341 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 985159DC2419E451002BB341 /* Assets.xcassets */; };
 		985159E02419E451002BB341 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 985159DE2419E451002BB341 /* LaunchScreen.storyboard */; };
+		98DEC640241F0ED4002BAC4B /* SWQRCodeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98DEC63A241F0ED4002BAC4B /* SWQRCodeManager.swift */; };
+		98DEC641241F0ED5002BAC4B /* SWQRCodeConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98DEC63B241F0ED4002BAC4B /* SWQRCodeConfig.swift */; };
+		98DEC642241F0ED5002BAC4B /* SWQRCode.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 98DEC63C241F0ED4002BAC4B /* SWQRCode.bundle */; };
+		98DEC643241F0ED5002BAC4B /* SWScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98DEC63E241F0ED4002BAC4B /* SWScannerView.swift */; };
+		98DEC644241F0ED5002BAC4B /* SWQRCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98DEC63F241F0ED4002BAC4B /* SWQRCodeViewController.swift */; };
 		98E1018C241A178C00A5735D /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E1018B241A178C00A5735D /* APIManager.swift */; };
 		98E1018F241A229E00A5735D /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E1018E241A229E00A5735D /* Common.swift */; };
+		98E4FF24241F49DC000EE687 /* ImagePreviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E4FF22241F49DC000EE687 /* ImagePreviewVC.swift */; };
+		98E4FF25241F49DC000EE687 /* ImagePreviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E4FF23241F49DC000EE687 /* ImagePreviewCell.swift */; };
 		98EB1851241C6AE000E7CB98 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98EB1850241C6AE000E7CB98 /* LoginVC.swift */; };
 		98EB1871241C7B1200E7CB98 /* LocalizedUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98EB1870241C7B1200E7CB98 /* LocalizedUtils.swift */; };
 		98EB187E241C859D00E7CB98 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 98EB1880241C859D00E7CB98 /* Localizable.strings */; };
@@ -59,9 +66,16 @@
 		985159D72419E44F002BB341 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		985159DC2419E451002BB341 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		985159E12419E451002BB341 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		98DEC63A241F0ED4002BAC4B /* SWQRCodeManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWQRCodeManager.swift; sourceTree = "<group>"; };
+		98DEC63B241F0ED4002BAC4B /* SWQRCodeConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWQRCodeConfig.swift; sourceTree = "<group>"; };
+		98DEC63C241F0ED4002BAC4B /* SWQRCode.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SWQRCode.bundle; sourceTree = "<group>"; };
+		98DEC63E241F0ED4002BAC4B /* SWScannerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWScannerView.swift; sourceTree = "<group>"; };
+		98DEC63F241F0ED4002BAC4B /* SWQRCodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWQRCodeViewController.swift; sourceTree = "<group>"; };
 		98E10187241A09D000A5735D /* basicForSwift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "basicForSwift-Bridging-Header.h"; sourceTree = "<group>"; };
 		98E1018B241A178C00A5735D /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		98E1018E241A229E00A5735D /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		98E4FF22241F49DC000EE687 /* ImagePreviewVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePreviewVC.swift; sourceTree = "<group>"; };
+		98E4FF23241F49DC000EE687 /* ImagePreviewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePreviewCell.swift; sourceTree = "<group>"; };
 		98EB1850241C6AE000E7CB98 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		98EB1870241C7B1200E7CB98 /* LocalizedUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizedUtils.swift; sourceTree = "<group>"; };
 		98EB187A241C856900E7CB98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -177,6 +191,7 @@
 		985159D22419E44F002BB341 /* basicForSwift */ = {
 			isa = PBXGroup;
 			children = (
+				98DEC637241F049C002BAC4B /* ThirdLibrary */,
 				98EB1868241C7AA500E7CB98 /* LanguageResource */,
 				98E1018D241A226D00A5735D /* Common */,
 				98E10184241A01B700A5735D /* NetworkManager */,
@@ -192,6 +207,43 @@
 				985159E12419E451002BB341 /* Info.plist */,
 			);
 			path = basicForSwift;
+			sourceTree = "<group>";
+		};
+		98DEC637241F049C002BAC4B /* ThirdLibrary */ = {
+			isa = PBXGroup;
+			children = (
+				98E4FF21241F49DC000EE687 /* ImagePreview */,
+				98DEC638241F0ED4002BAC4B /* SWQRCode */,
+			);
+			path = ThirdLibrary;
+			sourceTree = "<group>";
+		};
+		98DEC638241F0ED4002BAC4B /* SWQRCode */ = {
+			isa = PBXGroup;
+			children = (
+				98DEC639241F0ED4002BAC4B /* Config */,
+				98DEC63C241F0ED4002BAC4B /* SWQRCode.bundle */,
+				98DEC63D241F0ED4002BAC4B /* View */,
+				98DEC63F241F0ED4002BAC4B /* SWQRCodeViewController.swift */,
+			);
+			path = SWQRCode;
+			sourceTree = "<group>";
+		};
+		98DEC639241F0ED4002BAC4B /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				98DEC63A241F0ED4002BAC4B /* SWQRCodeManager.swift */,
+				98DEC63B241F0ED4002BAC4B /* SWQRCodeConfig.swift */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		98DEC63D241F0ED4002BAC4B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				98DEC63E241F0ED4002BAC4B /* SWScannerView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		98E10184241A01B700A5735D /* NetworkManager */ = {
@@ -214,6 +266,15 @@
 				98190F08241B32D600DF0980 /* CommonMethod.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		98E4FF21241F49DC000EE687 /* ImagePreview */ = {
+			isa = PBXGroup;
+			children = (
+				98E4FF22241F49DC000EE687 /* ImagePreviewVC.swift */,
+				98E4FF23241F49DC000EE687 /* ImagePreviewCell.swift */,
+			);
+			path = ImagePreview;
 			sourceTree = "<group>";
 		};
 		98EB184E241C6ABB00E7CB98 /* LoginVC */ = {
@@ -292,7 +353,7 @@
 			};
 			buildConfigurationList = 985159CB2419E44F002BB341 /* Build configuration list for PBXProject "basicForSwift" */;
 			compatibilityVersion = "Xcode 9.3";
-			developmentRegion = en;
+			developmentRegion = "zh-Hans";
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
@@ -315,6 +376,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				985159E02419E451002BB341 /* LaunchScreen.storyboard in Resources */,
+				98DEC642241F0ED5002BAC4B /* SWQRCode.bundle in Resources */,
 				98EB187E241C859D00E7CB98 /* Localizable.strings in Resources */,
 				985159DD2419E451002BB341 /* Assets.xcassets in Resources */,
 				985159DB2419E44F002BB341 /* Main.storyboard in Resources */,
@@ -340,7 +402,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Localizable.strings文件路径\nlocalizableFile=\"/Users/wchen/Desktop/basicForSwift/basicForSwift/basicForSwift/LanguageResource/en.lproj/Localizable.strings\"\n# 生成的swift文件路径（根据个人习惯修改）\nlocalizedFile=\"/Users/wchen/Desktop/basicForSwift/basicForSwift/basicForSwift/LanguageResource/LocalizedUtils.swift\"\n# 将localizable.strings中的文本转为swift格式的常量，存入一个临时文件\nsed \"s/^\\\"/  static var localized_/g\" \"${localizableFile}\" | sed \"s/\\\" = \\\"/: String { return \\\"/g\" | sed \"s/;$/.localized }/g\" > \"${localizedFile}.tmp\"\n# 先将localized作为计算属性输出到目标文件\necho \"import Foundation\\n\\nextension String {\\n  var localized: String { return NSLocalizedString(self, comment: self) }\" > \"${localizedFile}\"\n# 再将临时文件中的常量增量输出到目标文件\ncat \"${localizedFile}.tmp\" >> \"${localizedFile}\"\n# 最后增量输出一个\"}\"到目标文件，完成输出\necho \"\\n}\" >> \"${localizedFile}\"\n# 删除临时文件\nrm \"${localizedFile}.tmp\"\n";
+			shellScript = "# Localizable.strings文件路径\nlocalizableFile=\"${SRCROOT}/${PROJECT_NAME}/LanguageResource/zh-Hans.lproj/Localizable.strings\"\n# 生成的swift文件路径（根据个人习惯修改）\nlocalizedFile=\"${SRCROOT}/${PROJECT_NAME}/LanguageResource/LocalizedUtils.swift\"\n\n# 将localizable.strings中的文本转为swift格式的常量，存入一个临时文件\nsed \"s/^\\\"/  static var localized_/g\" \"${localizableFile}\" | sed \"s/\\\" = \\\"/: String { return \\\"/g\" | sed \"s/;$/.localized }/g\" > \"${localizedFile}.tmp\"\n# 先将localized作为计算属性输出到目标文件\necho \"import Foundation\\n\\nextension String {\\n  var localized: String { return NSLocalizedString(self, comment: self) }\" > \"${localizedFile}\"\n# 再将临时文件中的常量增量输出到目标文件\ncat \"${localizedFile}.tmp\" >> \"${localizedFile}\"\n# 最后增量输出一个\"}\"到目标文件，完成输出\necho \"\\n}\" >> \"${localizedFile}\"\n# 删除临时文件\nrm \"${localizedFile}.tmp\"\n";
 		};
 		A11C07C1531A6B75D947156B /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -389,16 +451,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				98190F1B241B56FB00DF0980 /* BaseModel.swift in Sources */,
+				98DEC644241F0ED5002BAC4B /* SWQRCodeViewController.swift in Sources */,
 				98190F00241B2FF700DF0980 /* RootTabBarVC.swift in Sources */,
 				98EB1871241C7B1200E7CB98 /* LocalizedUtils.swift in Sources */,
 				985159D82419E44F002BB341 /* ViewController.swift in Sources */,
 				98E1018C241A178C00A5735D /* APIManager.swift in Sources */,
 				98190F09241B32D600DF0980 /* CommonMethod.swift in Sources */,
+				98E4FF24241F49DC000EE687 /* ImagePreviewVC.swift in Sources */,
 				98190F19241B564D00DF0980 /* HomePageModel.swift in Sources */,
 				98190F17241B560200DF0980 /* HomePageViewModel.swift in Sources */,
 				985159D42419E44F002BB341 /* AppDelegate.swift in Sources */,
 				98E1018F241A229E00A5735D /* Common.swift in Sources */,
+				98E4FF25241F49DC000EE687 /* ImagePreviewCell.swift in Sources */,
+				98DEC641241F0ED5002BAC4B /* SWQRCodeConfig.swift in Sources */,
 				98190F12241B517400DF0980 /* APIRequestExtension.swift in Sources */,
+				98DEC640241F0ED4002BAC4B /* SWQRCodeManager.swift in Sources */,
 				98190F03241B2FF700DF0980 /* RootChildViewController.swift in Sources */,
 				98190F01241B2FF700DF0980 /* RootNavigationController.swift in Sources */,
 				98190F07241B303000DF0980 /* CommonFont.swift in Sources */,
@@ -407,6 +474,7 @@
 				98190F02241B2FF700DF0980 /* RootViewController.swift in Sources */,
 				98190F15241B549400DF0980 /* BaseViewModel.swift in Sources */,
 				98190F05241B301F00DF0980 /* CommonColor.swift in Sources */,
+				98DEC643241F0ED5002BAC4B /* SWScannerView.swift in Sources */,
 				985159D62419E44F002BB341 /* SceneDelegate.swift in Sources */,
 				98190F10241B34D500DF0980 /* HomePageVC.swift in Sources */,
 			);
@@ -575,13 +643,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 79ZD3Y45DT;
+				DEVELOPMENT_TEAM = WS3G2632M8;
 				INFOPLIST_FILE = basicForSwift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = wchen.company.com.basicForSwift;
+				PRODUCT_BUNDLE_IDENTIFIER = com.xingYun.garbageCassification;
 				PRODUCT_NAME = "示例App";
 				SWIFT_OBJC_BRIDGING_HEADER = "/Users/wchen/Desktop/basicForSwift/basicForSwift/basicForSwift/basicForSwift-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -597,13 +665,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 79ZD3Y45DT;
+				DEVELOPMENT_TEAM = WS3G2632M8;
 				INFOPLIST_FILE = basicForSwift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = wchen.company.com.basicForSwift;
+				PRODUCT_BUNDLE_IDENTIFIER = com.xingYun.garbageCassification;
 				PRODUCT_NAME = "示例App";
 				SWIFT_OBJC_BRIDGING_HEADER = "/Users/wchen/Desktop/basicForSwift/basicForSwift/basicForSwift/basicForSwift-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;

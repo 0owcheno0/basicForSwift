@@ -6,5 +6,19 @@
   Copyright © 2020 wchen. All rights reserved.
 */
 
-"homePage" = "homePage";
+"OK" = "OK";
+"Cancel" = "Cancel";
+"cameraRole" = "Please allow access to your camera in the 'Settings-Privacy-Camera' option";
+"albumRole" = "Allow access to your albums in the 'Settings-Privacy-Photos' option";
+"QRCode" = "QRCode";
+"barCode" = "Barcode";
+"QRAndBarcode" = "QRCode/BarCode";
+"scanInstruct" = "Put the QRCode/barCode into the box and it will scan automatically";
+"openLight" = "Light up with a touch";
+"closeLight" = "Touch to close";
+"album" = "Album";
+"scan" = "Scan";
+"imagePreview" = "Image Preview";
+
+"homePage" = "HomePage";
 "login" = "login";

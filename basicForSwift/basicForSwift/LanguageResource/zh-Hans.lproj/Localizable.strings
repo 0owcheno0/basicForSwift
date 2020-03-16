@@ -6,5 +6,20 @@
   Copyright © 2020 wchen. All rights reserved.
 */
 
+"OK" = "确定";
+"Cancel" = "取消";
+"cameraRole" = "请在”设置-隐私-相机”选项中，允许访问你的相机";
+"albumRole" = "请在”设置-隐私-相片”选项中，允许访问你的相册";
+"QRCode" = "二维码";
+"barCode" = "条形码";
+"QRAndBarcode" = "二维码/条码";
+"scanInstruct" = "将二维码/条码放入框内，即可自动扫描";
+"openLight" = "轻触照亮";
+"closeLight" = "轻触关闭";
+"album" = "相册";
+"scan" = "扫一扫";
+"imagePreview" = "图片预览";
+
 "homePage" = "首页";
 "login" = "登录";
+

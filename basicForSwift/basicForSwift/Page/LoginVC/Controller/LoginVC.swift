@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoginVC: UIViewController {
+class LoginVC: RootChildViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,17 +16,13 @@ class LoginVC: UIViewController {
         self.navigationItem.titleView = CommonMethod.setDisplayCustomTitle(title: .localized_login, color: UIColor.init(named: "black_color")!)
         
         self.view.backgroundColor = UIColor.init(named: "black_color_241")
+        
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(title: .localized_scan, style: UIBarButtonItem.Style.plain, target: self, action: #selector(rightItemClick))
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @objc func rightItemClick() {
+        let qrcodeVC = SWQRCodeViewController()
+        self.navigationController?.pushViewController(qrcodeVC, animated: true)
     }
-    */
 
 }
