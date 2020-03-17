@@ -14,7 +14,8 @@ let documentsCachesURL = FileManager.default.urls(for: .cachesDirectory, in: .us
 //本地路径不会被清理
 let documentsURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
 /************** UserDefaults **************/
-let BaseToken = "base_token"              //登录返回的token
+let BaseToken = "base_token"            //登录返回的token
+let BaseFont = "base_font"              //字体大小
 
 //MARK: 分页数
 let pageCount = 20

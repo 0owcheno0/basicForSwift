@@ -36,7 +36,7 @@ class SWScannerView: UIView {
         
         scanner_width = 0.7*self.frame.size.width
         scanner_x = (self.frame.size.width - scanner_width)/2
-        scanner_y = (self.frame.size.height - scanner_width - 50)/2
+        scanner_y = (self.frame.size.height - scanner_width)/2 - 50
         self.config = config
         
         _setupUI()
@@ -123,7 +123,7 @@ class SWScannerView: UIView {
         let tempTipLab = UILabel(frame: CGRect(x: 0, y: scanner_y + scanner_width, width: self.frame.size.width, height: 50))
         tempTipLab.textAlignment = .center
         tempTipLab.textColor = .lightGray
-        tempTipLab.font = UIFont.systemFont(ofSize: 12)
+        tempTipLab.font = UIFont.commonFont(fontName: FontName.Helvetica, fontSize: 12)
         tempTipLab.text = .localized_scanInstruct
         return tempTipLab
     }()
@@ -143,7 +143,7 @@ class SWScannerView: UIView {
     /** 手电筒提示文字 */
     private lazy var flashlightLab: UILabel = {
         let tempFlashlightLab = UILabel(frame: CGRect(x: scanner_x, y: scanner_y + scanner_width - 10 - flashlightLab_height, width: scanner_width, height: flashlightLab_height))
-        tempFlashlightLab.font = UIFont.systemFont(ofSize: 12)
+        tempFlashlightLab.font = UIFont.commonFont(fontName: FontName.Helvetica, fontSize: 12)
         tempFlashlightLab.textColor = .white
         tempFlashlightLab.text = .localized_openLight
         tempFlashlightLab.alpha = 0;
@@ -231,6 +231,7 @@ extension SWScannerView {
     func sw_addActivityIndicator() {
         if self.activityIndicator == nil {
             self.activityIndicator = UIActivityIndicatorView(style: self.config.indicatorViewStyle)
+            self.activityIndicator.color = UIColor.white
             self.activityIndicator.center = self.center
             self.addSubview(self.activityIndicator)
         }

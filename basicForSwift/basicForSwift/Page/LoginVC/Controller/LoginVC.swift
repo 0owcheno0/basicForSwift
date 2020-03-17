@@ -18,11 +18,14 @@ class LoginVC: RootChildViewController {
         self.view.backgroundColor = UIColor.init(named: "black_color_241")
         
         self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(title: .localized_scan, style: UIBarButtonItem.Style.plain, target: self, action: #selector(rightItemClick))
+        
+        
     }
     
     @objc func rightItemClick() {
-        let qrcodeVC = SWQRCodeViewController()
-        self.navigationController?.pushViewController(qrcodeVC, animated: true)
+        SVProgressHUD.showInfo(withStatus: "113213")
+//        let qrcodeVC = SWQRCodeViewController()
+//        self.navigationController?.pushViewController(qrcodeVC, animated: true)
     }
 
 }

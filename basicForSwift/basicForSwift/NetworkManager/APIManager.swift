@@ -54,7 +54,7 @@ extension APIManager: TargetType {
     var path: String {
         switch self {
         case .uploadFile(_, _):
-            return "/singlePoetry/upload/"
+            return ""
         case .downloadFile(_, _):
             return ""
         case .recommend:

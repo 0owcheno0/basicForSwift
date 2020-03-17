@@ -18,7 +18,7 @@ class CommonMethod: NSObject {
         let titleLabel = UILabel.init(frame: CGRect.init(x: 0, y: 0, width: titleView.frame.size.width, height: 44))
         titleLabel.backgroundColor = UIColor.clear
         titleLabel.textColor = color
-        titleLabel.font = title_font
+        titleLabel.font = UIFont.commonFont(fontName: FontName.HelveticaBold, fontSize: 16)
         titleLabel.textAlignment = .center
         titleLabel.lineBreakMode = .byCharWrapping
         titleLabel.numberOfLines = 0
@@ -55,7 +55,7 @@ class CommonMethod: NSObject {
         
         if (bCancel)
         {
-            let cancelAction = UIAlertAction.init(title: "取消", style: UIAlertAction.Style.cancel) { (UIAlertAction) in
+            let cancelAction = UIAlertAction.init(title: .localized_Cancel, style: UIAlertAction.Style.cancel) { (UIAlertAction) in
                 actionBlock(0)
             }
             alert.addAction(cancelAction)
@@ -85,25 +85,25 @@ class CommonMethod: NSObject {
 
 extension String{
     func ga_heightForReason() -> CGFloat {
-        let rect = NSString(string: self).boundingRect(with: CGSize(width: screen_width - 100, height: CGFloat(MAXFLOAT)), options: .usesLineFragmentOrigin, attributes: [NSAttributedString.Key.font: UIFont(name: "PingFang-SC-Medium", size: 16)!], context: nil)
+        let rect = NSString(string: self).boundingRect(with: CGSize(width: screen_width - 100, height: CGFloat(MAXFLOAT)), options: .usesLineFragmentOrigin, attributes: [NSAttributedString.Key.font: UIFont.commonFont(fontName: FontName.PingFangSCRegular, fontSize: 16)], context: nil)
         
         return ceil(rect.height)
     }
     
     func ga_widthForComment(fontSize: CGFloat, height: CGFloat = 15) -> CGFloat {
-        let font = UIFont.systemFont(ofSize: fontSize)
+        let font = UIFont.commonFont(fontName: FontName.PingFangSCRegular, fontSize: fontSize)
         let rect = NSString(string: self).boundingRect(with: CGSize(width: CGFloat(MAXFLOAT), height: height), options: .usesLineFragmentOrigin, attributes: [NSAttributedString.Key.font: font], context: nil)
         return ceil(rect.width)
     }
     
     func ga_heightForComment(fontSize: CGFloat, width: CGFloat) -> CGFloat {
-        let font = UIFont.systemFont(ofSize: fontSize)
+        let font = UIFont.commonFont(fontName: FontName.PingFangSCRegular, fontSize: fontSize)
         let rect = NSString(string: self).boundingRect(with: CGSize(width: width, height: CGFloat(MAXFLOAT)), options: .usesLineFragmentOrigin, attributes: [NSAttributedString.Key.font: font], context: nil)
         return ceil(rect.height)
     }
     
     func ga_heightForComment(fontSize: CGFloat, width: CGFloat, maxHeight: CGFloat) -> CGFloat {
-        let font = UIFont.systemFont(ofSize: fontSize)
+        let font = UIFont.commonFont(fontName: FontName.PingFangSCRegular, fontSize: fontSize)
         let rect = NSString(string: self).boundingRect(with: CGSize(width: width, height: CGFloat(MAXFLOAT)), options: .usesLineFragmentOrigin, attributes: [NSAttributedString.Key.font: font], context: nil)
         return ceil(rect.height)>maxHeight ? maxHeight : ceil(rect.height)
     }
