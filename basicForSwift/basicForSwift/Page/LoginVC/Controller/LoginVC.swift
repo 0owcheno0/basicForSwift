@@ -10,6 +10,8 @@ import UIKit
 
 class LoginVC: RootChildViewController {
 
+    let viewModel = LoginViewModel()
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -19,13 +21,18 @@ class LoginVC: RootChildViewController {
         
         self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(title: .localized_scan, style: UIBarButtonItem.Style.plain, target: self, action: #selector(rightItemClick))
         
-        
+        // 接口请求
+        viewModel.requestLogin(username: "", password: "", complete: { (model) in
+            
+        }) { (message) in
+            SVProgressHUD.showError(withStatus: message)
+        }
     }
     
     @objc func rightItemClick() {
-        SVProgressHUD.showInfo(withStatus: "113213")
-//        let qrcodeVC = SWQRCodeViewController()
-//        self.navigationController?.pushViewController(qrcodeVC, animated: true)
+        
+        let qrcodeVC = SWQRCodeViewController()
+        self.navigationController?.pushViewController(qrcodeVC, animated: true)
     }
 
 }

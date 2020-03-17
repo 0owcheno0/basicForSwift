@@ -18,12 +18,6 @@ class HomePageVC: RootViewController {
         
         self.view.backgroundColor = UIColor.init(named: "black_color_241")
         
-        // 接口请求
-        viewModel.requestRecome(complete: { (model) in
-            print(model)
-        }) { (message) in
-            print(message)
-        }
     }
     
 

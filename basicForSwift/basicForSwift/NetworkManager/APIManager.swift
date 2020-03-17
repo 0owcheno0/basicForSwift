@@ -33,7 +33,7 @@ import MobileCoreServices
 enum APIManager {
     case uploadFile(paramsDic: NSMutableDictionary, dataAry: [Any])     // 上传图片
     case downloadFile(downloadPath: String, localPath: String)          // 下载文件
-    case recommend
+    case login(username: String, password: String)                      // 登录
     case search(name:String, page:String, pageCount:String)
 }
 
@@ -46,7 +46,7 @@ extension APIManager: TargetType {
         case .downloadFile(downloadPath: let downloadPath, _):
             return URL(string: downloadPath)!
         default:
-            return URL(string: "http://api.apiopen.top")!
+            return URL(string: "http://")!
         }
     }
     
@@ -57,10 +57,10 @@ extension APIManager: TargetType {
             return ""
         case .downloadFile(_, _):
             return ""
-        case .recommend:
-            return "/singlePoetry/wadf/"
+        case .login(_, _):
+            return ""
         case .search( _, _, _):
-            return "/searchAuthors/ewewfad/"
+            return ""
         }
     }
     
@@ -73,8 +73,8 @@ extension APIManager: TargetType {
         case .downloadFile(_, _):
             return .get
             
-        case .recommend:
-            return .get
+        case .login(_, _):
+            return .post
             
         case .search( _, _, _):
             return .post
@@ -84,8 +84,8 @@ extension APIManager: TargetType {
     //请求参数类型
     public var parameterEncoding: ParameterEncoding {
         switch self {
-        case .recommend:
-            return URLEncoding.default
+        case .login(_, _):
+            return JSONEncoding.default
         case .search( _, _, _):
             return JSONEncoding.default
         default:
@@ -119,8 +119,10 @@ extension APIManager: TargetType {
                 return (URL(string: localPath)!, .removePreviousFile) }
             return .downloadDestination(downloadDestination)
             
-        case .recommend:
-            return .requestPlain
+        case .login(username: let username, password: let password):
+            var parameters : [String: Any] = [:]
+            parameters = ["username" : username, "password" : password]
+            return .requestParameters(parameters: parameters, encoding: JSONEncoding.default)
             
         case .search(name: let name, page: let page, pageCount: let pageCount):
             var parameters : [String: Any] = [:]

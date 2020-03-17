@@ -28,6 +28,9 @@
 		985159DB2419E44F002BB341 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 985159D92419E44F002BB341 /* Main.storyboard */; };
 		985159DD2419E451002BB341 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 985159DC2419E451002BB341 /* Assets.xcassets */; };
 		985159E02419E451002BB341 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 985159DE2419E451002BB341 /* LaunchScreen.storyboard */; };
+		98C11FB82420B521008CFDC7 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98C11FB72420B521008CFDC7 /* LoginModel.swift */; };
+		98C11FBB2420B570008CFDC7 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98C11FBA2420B570008CFDC7 /* LoginViewModel.swift */; };
+		98C11FBE2420BA81008CFDC7 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98C11FBD2420BA81008CFDC7 /* LoginView.swift */; };
 		98DEC640241F0ED4002BAC4B /* SWQRCodeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98DEC63A241F0ED4002BAC4B /* SWQRCodeManager.swift */; };
 		98DEC641241F0ED5002BAC4B /* SWQRCodeConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98DEC63B241F0ED4002BAC4B /* SWQRCodeConfig.swift */; };
 		98DEC642241F0ED5002BAC4B /* SWQRCode.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 98DEC63C241F0ED4002BAC4B /* SWQRCode.bundle */; };
@@ -66,6 +69,9 @@
 		985159D72419E44F002BB341 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		985159DC2419E451002BB341 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		985159E12419E451002BB341 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		98C11FB72420B521008CFDC7 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		98C11FBA2420B570008CFDC7 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		98C11FBD2420BA81008CFDC7 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		98DEC63A241F0ED4002BAC4B /* SWQRCodeManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWQRCodeManager.swift; sourceTree = "<group>"; };
 		98DEC63B241F0ED4002BAC4B /* SWQRCodeConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWQRCodeConfig.swift; sourceTree = "<group>"; };
 		98DEC63C241F0ED4002BAC4B /* SWQRCode.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SWQRCode.bundle; sourceTree = "<group>"; };
@@ -209,6 +215,30 @@
 			path = basicForSwift;
 			sourceTree = "<group>";
 		};
+		98C11FB62420B509008CFDC7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				98C11FB72420B521008CFDC7 /* LoginModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		98C11FB92420B532008CFDC7 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				98C11FBA2420B570008CFDC7 /* LoginViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		98C11FBC2420BA6F008CFDC7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				98C11FBD2420BA81008CFDC7 /* LoginView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		98DEC637241F049C002BAC4B /* ThirdLibrary */ = {
 			isa = PBXGroup;
 			children = (
@@ -280,6 +310,9 @@
 		98EB184E241C6ABB00E7CB98 /* LoginVC */ = {
 			isa = PBXGroup;
 			children = (
+				98C11FBC2420BA6F008CFDC7 /* View */,
+				98C11FB92420B532008CFDC7 /* ViewModel */,
+				98C11FB62420B509008CFDC7 /* Model */,
 				98EB184F241C6AC700E7CB98 /* Controller */,
 			);
 			path = LoginVC;
@@ -451,6 +484,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				98190F1B241B56FB00DF0980 /* BaseModel.swift in Sources */,
+				98C11FB82420B521008CFDC7 /* LoginModel.swift in Sources */,
 				98DEC644241F0ED5002BAC4B /* SWQRCodeViewController.swift in Sources */,
 				98190F00241B2FF700DF0980 /* RootTabBarVC.swift in Sources */,
 				98EB1871241C7B1200E7CB98 /* LocalizedUtils.swift in Sources */,
@@ -467,9 +501,11 @@
 				98190F12241B517400DF0980 /* APIRequestExtension.swift in Sources */,
 				98DEC640241F0ED4002BAC4B /* SWQRCodeManager.swift in Sources */,
 				98190F03241B2FF700DF0980 /* RootChildViewController.swift in Sources */,
+				98C11FBE2420BA81008CFDC7 /* LoginView.swift in Sources */,
 				98190F01241B2FF700DF0980 /* RootNavigationController.swift in Sources */,
 				98190F07241B303000DF0980 /* CommonFont.swift in Sources */,
 				98190F1D241B57CC00DF0980 /* HomePageView.swift in Sources */,
+				98C11FBB2420B570008CFDC7 /* LoginViewModel.swift in Sources */,
 				98EB1851241C6AE000E7CB98 /* LoginVC.swift in Sources */,
 				98190F02241B2FF700DF0980 /* RootViewController.swift in Sources */,
 				98190F15241B549400DF0980 /* BaseViewModel.swift in Sources */,
