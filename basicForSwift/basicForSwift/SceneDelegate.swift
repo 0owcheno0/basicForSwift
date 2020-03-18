@@ -21,20 +21,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         if let windowScene = (scene as? UIWindowScene) {
             let window = UIWindow(windowScene: windowScene)
             let token:String? = UserDefaults.standard.string(forKey: BaseToken)
-            if token != nil
-            {
+            if token != nil {
                 let tabBarVC = RootTabBarVC()
                 window.rootViewController = tabBarVC
-            }
-            else
-            {
+            } else {
                 let navViewController = RootNavigationController.init(rootViewController: LoginVC())
                 window.rootViewController = navViewController
             }
-
             self.window = window
             self.window!.makeKeyAndVisible()
-            
         } else {
             return
         }

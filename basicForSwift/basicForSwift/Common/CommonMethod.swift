@@ -61,26 +61,49 @@ class CommonMethod: NSObject {
             alert.addAction(cancelAction)
         }
         
-        var rootVC : UIViewController! = nil
-        if (vc as! UIViewController).isKind(of: UIViewController.classForCoder())
-        {
-            rootVC = (vc as! UIViewController)
+        if let rootVC = CommonMethod.findVisibleViewController() {
+            rootVC.present(alert, animated: true, completion: nil)
         }
-        else
-        {
-            var next = (vc as! UIViewController).next
-            while next != nil
-            {
-                next = (vc as! UIViewController).next
-                if (((next?.isKind(of: UIViewController.classForCoder()))!) && ((next as! UIViewController).navigationController != nil))
-                {
-                    rootVC = (next as! UIViewController)
+    }
+    
+    //获取根控制器
+    static func getRootViewController() -> UIViewController? {
+        var window: UIWindow?
+        if #available(iOS 13, *) {
+            let scene = UIApplication.shared.connectedScenes.first
+            if ((scene?.delegate?.conforms(to: UIWindowSceneDelegate.self))!) {
+                window = (scene?.delegate as! UIWindowSceneDelegate).window!
+            } else {
+                window = (UIApplication.shared.delegate?.window)!
+            }
+        } else {
+            window = (UIApplication.shared.delegate?.window)!
+        }
+        return window!.rootViewController
+    }
+    
+    //获取当前视图所在导航控制器
+    static func findVisibleViewController() -> UIViewController? {
+        
+        var currentViewController = CommonMethod.getRootViewController()
+        
+        let runLoopFind = true
+        while runLoopFind {
+            if currentViewController?.presentedViewController != nil {
+                currentViewController = currentViewController?.presentedViewController
+            } else {
+                if (currentViewController is UINavigationController) {
+                    currentViewController = (currentViewController as? UINavigationController)?.visibleViewController
+                } else if (currentViewController is UITabBarController) {
+                    currentViewController = (currentViewController as? UITabBarController)?.selectedViewController
+                } else {
+                    break
                 }
             }
         }
-        rootVC.present(alert, animated: true, completion: nil)
+        return currentViewController
     }
-    
+
 }
 
 extension String{

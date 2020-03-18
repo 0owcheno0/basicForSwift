@@ -19,25 +19,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         if #available(iOS 13, *) {
             
-        }else {
+        } else {
             window = UIWindow.init(frame: UIScreen.main.bounds)
             let token:String? = UserDefaults.standard.string(forKey: BaseToken)
-            if token != nil
-            {
+            if token != nil {
                 let tabBarVC = RootTabBarVC()
                 window!.rootViewController = tabBarVC
-            }
-            else
-            {
+            } else {
                 let navViewController = RootNavigationController.init(rootViewController: LoginVC())
                 window!.rootViewController = navViewController
             }
             window?.makeKeyAndVisible()
         }
-        
-        //第三方键盘注册
-        IQKeyboardManager.shared.enable = true
-        IQKeyboardManager.shared.shouldResignOnTouchOutside = true
         
         //第三方键盘注册
         IQKeyboardManager.shared.enable = true
