@@ -133,7 +133,7 @@ extension String{
     
     //将原始的url编码为合法的url(接口请求特殊字符处理)
     func urlEncoded() -> String {
-
+        
         let KUrlCodingReservedCharacters = "!*'();:|@&=+$,/?%#[]{}"
         
         let encodeUrlString = self.addingPercentEncoding(withAllowedCharacters: CharacterSet(charactersIn: KUrlCodingReservedCharacters).inverted)
@@ -144,6 +144,49 @@ extension String{
     //将编码后的url转换回原始的url
     func urlDecoded() -> String {
         return self.removingPercentEncoding ?? ""
+    }
+    
+    // 判断手机号码格式是否正确
+    func valiMobile() -> Bool {
+        /**
+         * 手机号码
+         * 移动：134[0-8],135,136,137,138,139,150,151,157,158,159,182,187,188
+         * 147，152，183，184
+         * 联通：130,131,132,152,155,156,185,186
+         * 166，175，176，145
+         * 电信：133,1349,153,180,189
+         */
+        let PHONE_NUM = "^1([358][0-9]|4[579]|66|7[0135678]|9[89])[0-9]{8}$"
+        
+        /**
+         * 大陆地区固话及小灵通
+         * 区号：010,020,021,022,023,024,025,027,028,029
+         * 号码：七位或八位
+         */
+        //        let PHS = "^0(10|2[0-5789]|\\d{3})\\d{7,8}$"    //带区号
+        let PHS = "^[1-9]{1}[0-9]{5,8}$"                  //不带区号
+        
+        let regextestmobile = NSPredicate.init(format: "SELF MATCHES %@", PHONE_NUM)
+        let regextestPHS = NSPredicate.init(format: "SELF MATCHES %@", PHS)
+        
+        if regextestmobile.evaluate(with: self) || (regextestPHS.evaluate(with: self) && self.count == 8) {
+            return true
+        } else {
+            return false
+        }
+    }
+    
+    //改变字符串中部分文字颜色
+    func setRichTextWith(changeText:String,changeColor:UIColor) -> NSMutableAttributedString
+    {
+        let attributedString = NSMutableAttributedString(string: self)
+        
+        let strTemp = NSString.init(string: self)
+        let range = strTemp.range(of: changeText)
+        
+        attributedString.addAttributes([NSAttributedString.Key.foregroundColor : changeColor], range: range)
+        
+        return attributedString
     }
 }
 
@@ -236,6 +279,58 @@ extension Date{
             return false
         }
     }
+    
+    //根据判断  获取不同时间段的称呼
+    var dateDesctiption: String {
+        //1、使用日历类取出当前的日期
+        let calendar : NSCalendar = NSCalendar.current as NSCalendar
+        
+        //判断
+        if calendar.isDateInToday(self)
+        {
+            //把获取的日期和现在的系统时进行比较，判断时间差
+            
+            let dateTime = Int(NSDate().timeIntervalSince(self))
+            
+            if dateTime < 60 {
+                return "刚刚"
+            }
+            
+            if dateTime < 3600 {
+                return "\(dateTime / 60)分钟前"
+            }
+            return "\(dateTime / 3600)小时前"
+        }
+        
+        //日格式字符串
+        var fmtString = "HH:mm"
+        
+        if calendar.isDateInYesterday(self)
+        {
+            fmtString = "昨天 " + fmtString
+        }
+        else
+        {
+            fmtString = "MM-dd " + fmtString
+            let coms = calendar.components(NSCalendar.Unit.year, from: self, to: NSDate() as Date, options: NSCalendar.Options(rawValue: 0))
+            if coms.year! > 0
+            {
+                fmtString = "yyyy-" + fmtString
+            }
+            else
+            {
+                if self.year() != Date().year()
+                {
+                    fmtString = "yyyy-" + fmtString
+                }
+            }
+        }
+        let df = DateFormatter()
+        df.locale = NSLocale(localeIdentifier: "en") as Locale
+        df.dateFormat = fmtString
+        
+        return df.string(from: self)
+    }
 }
 
 
@@ -251,5 +346,63 @@ extension UIView{
         maskLayer.frame = self.bounds
         maskLayer.path = maskPath.cgPath
         self.layer.mask = maskLayer
+    }
+    
+    // xib模板添加属性
+    //  圆角
+    @IBInspectable var cornerRadius: CGFloat {
+        get {
+            return layer.cornerRadius
+        } set {
+            layer.masksToBounds = (newValue > 0)
+            layer.cornerRadius = newValue
+        }
+    }
+    //  边线宽度
+    @IBInspectable var borderWidth: CGFloat {
+        get {
+            return layer.borderWidth
+        } set {
+            layer.borderWidth = newValue
+        }
+    }
+    //  边线颜色
+    @IBInspectable var borderColor: UIColor {
+        get {
+            return UIColor(cgColor: layer.borderColor!)
+        } set {
+            layer.borderColor = newValue.cgColor
+        }
+    }
+}
+
+// xib添加本地化字符串
+extension UILabel {
+    @IBInspectable var localizedKey: String? {
+        set {
+            guard let newValue = newValue else { return }
+            text = NSLocalizedString(newValue, comment: "")
+        }
+        get { return text }
+    }
+}
+
+extension UIButton {
+    @IBInspectable var localizedKey: String? {
+        set {
+            guard let newValue = newValue else { return }
+            setTitle(NSLocalizedString(newValue, comment: ""), for: .normal)
+        }
+        get { return titleLabel?.text }
+    }
+}
+
+extension UITextField {
+    @IBInspectable var localizedKey: String? {
+        set {
+            guard let newValue = newValue else { return }
+            placeholder = NSLocalizedString(newValue, comment: "")
+        }
+        get { return placeholder }
     }
 }

@@ -39,11 +39,11 @@ class LoginVC: RootChildViewController {
         }
         
         // 接口请求
-        viewModel.requestLogin(username: "", password: "", complete: { (model) in
-            
-        }) { (message) in
-            SVProgressHUD.showError(withStatus: message)
-        }
+//        viewModel.requestLogin(username: "", password: "", complete: { (model) in
+//            
+//        }) { (message) in
+//            SVProgressHUD.showError(withStatus: message)
+//        }
     }
     
     @objc func rightItemClick() {
