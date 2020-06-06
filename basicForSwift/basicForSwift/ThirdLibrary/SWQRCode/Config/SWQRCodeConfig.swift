@@ -41,5 +41,11 @@ struct SWQRCodeCompat {
     var scannerBorderColor: UIColor = .white
     
     /// 指示器风格
-    var indicatorViewStyle: UIActivityIndicatorView.Style = .large
+    var indicatorViewStyle: UIActivityIndicatorView.Style = {
+        if #available(iOS 13.0, *) {
+            return .large
+        } else {
+            return .whiteLarge
+        }
+    }()
 }

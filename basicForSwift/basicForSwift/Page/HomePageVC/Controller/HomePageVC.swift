@@ -14,9 +14,9 @@ class HomePageVC: RootViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.titleView = CommonMethod.setDisplayCustomTitle(title: .localized_homePage, color: UIColor.init(named: "black_color")!)
+        self.navigationItem.titleView = CommonMethod.setDisplayCustomTitle(title: .localized_homePage, color: CommonColor.sharedInstance.black_color)
         
-        self.view.backgroundColor = UIColor.init(named: "black_color_241")
+        self.view.backgroundColor = CommonColor.sharedInstance.black_color_241
         
     }
     

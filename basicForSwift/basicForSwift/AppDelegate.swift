@@ -41,8 +41,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //设置显示时间
         SVProgressHUD.setMinimumDismissTimeInterval(2.0)
         SVProgressHUD.setMaximumDismissTimeInterval(2.0)
-        SVProgressHUD.setBackgroundColor(UIColor.init(named: "SVProgressHUD_bg")!)
-        SVProgressHUD.setForegroundColor(UIColor.init(named: "white_color")!)
+        SVProgressHUD.setBackgroundColor(CommonColor.sharedInstance.SVProgressHUDBG_color)
+        SVProgressHUD.setForegroundColor(CommonColor.sharedInstance.white_color)
         
         return true
     }

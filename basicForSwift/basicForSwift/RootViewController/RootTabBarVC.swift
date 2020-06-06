@@ -13,21 +13,21 @@ class RootTabBarVC: UITabBarController,UITabBarControllerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.tabBar.tintColor = UIColor(named: "black_color")
-        self.tabBar.barTintColor = UIColor(named: "white_color")
+        self.tabBar.tintColor = CommonColor.sharedInstance.black_color
+        self.tabBar.barTintColor = CommonColor.sharedInstance.white_color
         self.tabBar.isTranslucent = false
         
         self.delegate = self
         
         let navViewController1 = RootNavigationController.init(rootViewController: HomePageVC())
-        navViewController1.navigationBar.barTintColor = UIColor(named: "white_color")
+        navViewController1.navigationBar.barTintColor = CommonColor.sharedInstance.white_color
         navViewController1.tabBarItem.title = .localized_homePage
         navViewController1.tabBarItem.image = UIImage(named: "home_noSelect")!.withRenderingMode(.alwaysOriginal)
         navViewController1.tabBarItem.selectedImage = UIImage(named: "home_selected")!.withRenderingMode(.alwaysOriginal)
         navViewController1.tabBarItem.tag = 0
         
         let navViewController2 = RootNavigationController.init(rootViewController: HomePageVC())
-        navViewController2.navigationBar.barTintColor = UIColor(named: "white_color")
+        navViewController2.navigationBar.barTintColor = CommonColor.sharedInstance.white_color
         navViewController2.tabBarItem.title = .localized_homePage
         navViewController2.tabBarItem.image = UIImage(named: "home_noSelect")!.withRenderingMode(.alwaysOriginal)
         navViewController2.tabBarItem.selectedImage = UIImage(named: "home_selected")!.withRenderingMode(.alwaysOriginal)

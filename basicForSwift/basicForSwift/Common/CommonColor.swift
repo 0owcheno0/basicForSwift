@@ -27,5 +27,62 @@ func kRGBColorFromHex(rgbValue: Int) -> UIColor {
 
 class CommonColor: NSObject {
     
+    static let sharedInstance = CommonColor()
+    
+    let black_color_241: UIColor = {
+        if #available(iOS 13.0, *) {
+            return UIColor.init { (traitCollection) -> UIColor in
+                if traitCollection.userInterfaceStyle == .dark {
+                    return UIColorRGB(R: 31, G: 42, B: 57)
+                } else {
+                    return UIColorRGB(R: 238, G: 241, B: 246)
+                }
+            }
+        } else {
+            return UIColorRGB(R: 238, G: 241, B: 246)
+        }
+    }()
+    
+    let black_color: UIColor = {
+        if #available(iOS 13.0, *) {
+            return UIColor.init { (traitCollection) -> UIColor in
+                if traitCollection.userInterfaceStyle == .dark {
+                    return UIColor.white
+                } else {
+                    return UIColor.black
+                }
+            }
+        } else {
+            return UIColor.black
+        }
+    }()
+    
+    let white_color: UIColor = {
+        if #available(iOS 13.0, *) {
+            return UIColor.init { (traitCollection) -> UIColor in
+                if traitCollection.userInterfaceStyle == .dark {
+                    return UIColor.black
+                } else {
+                    return UIColor.white
+                }
+            }
+        } else {
+            return UIColor.white
+        }
+    }()
+    
+    let SVProgressHUDBG_color: UIColor = {
+        if #available(iOS 13.0, *) {
+            return UIColor.init { (traitCollection) -> UIColor in
+                if traitCollection.userInterfaceStyle == .dark {
+                    return RGBA(r: 255, g: 255, b: 255, a: 0.6)
+                } else {
+                    return RGBA(r: 0, g: 0, b: 0, a: 0.6)
+                }
+            }
+        } else {
+            return RGBA(r: 0, g: 0, b: 0, a: 0.6)
+        }
+    }()
     
 }

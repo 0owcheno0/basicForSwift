@@ -13,10 +13,10 @@ class RootViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.view.backgroundColor = UIColor.init(named: "black_color_241")
+        self.view.backgroundColor = CommonColor.sharedInstance.black_color_241
 
-        self.navigationController?.navigationBar.tintColor = UIColor.init(named: "black_color")
-        self.navigationController?.navigationBar.barTintColor = UIColor(named: "white_color")
+        self.navigationController?.navigationBar.tintColor = CommonColor.sharedInstance.black_color
+        self.navigationController?.navigationBar.barTintColor = CommonColor.sharedInstance.white_color
         
         self.navigationController?.navigationBar.isTranslucent = false
         

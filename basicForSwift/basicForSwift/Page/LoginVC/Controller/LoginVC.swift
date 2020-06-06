@@ -17,17 +17,17 @@ class LoginVC: RootChildViewController {
         let btnLogin = UIButton.init(type: UIButton.ButtonType.custom)
         btnLogin.setTitle(.localized_login, for: UIControl.State.normal)
         btnLogin.addTarget(self, action: #selector(btnLoginClick), for: UIControl.Event.touchUpInside)
-        btnLogin.setTitleColor(UIColor.init(named: "white_color"), for: UIControl.State.normal)
-        btnLogin.backgroundColor = UIColor.init(named: "black_color")
+        btnLogin.setTitleColor(CommonColor.sharedInstance.white_color, for: UIControl.State.normal)
+        btnLogin.backgroundColor = CommonColor.sharedInstance.black_color
         return btnLogin
     }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.navigationItem.titleView = CommonMethod.setDisplayCustomTitle(title: .localized_login, color: UIColor.init(named: "black_color")!)
+        self.navigationItem.titleView = CommonMethod.setDisplayCustomTitle(title: .localized_login, color: CommonColor.sharedInstance.black_color)
         
-        self.view.backgroundColor = UIColor.init(named: "black_color_241")
+        self.view.backgroundColor = CommonColor.sharedInstance.black_color_241
         
         self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(title: .localized_scan, style: UIBarButtonItem.Style.plain, target: self, action: #selector(rightItemClick))
         

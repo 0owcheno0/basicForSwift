@@ -46,7 +46,7 @@ class ImagePreviewVC: RootViewController {
     //初始化
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.titleView = CommonMethod.setDisplayCustomTitle(title: .localized_imagePreview, color: UIColor.init(named: "black_color")!)
+        self.navigationItem.titleView = CommonMethod.setDisplayCustomTitle(title: .localized_imagePreview, color: CommonColor.sharedInstance.black_color)
 
         //背景设为黑色
         self.view.backgroundColor = UIColor.black
